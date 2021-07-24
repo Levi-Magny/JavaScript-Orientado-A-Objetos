@@ -21,13 +21,17 @@ export class Conta {
 
     sacar(valor){
         let taxa = 1;
-        valor *= taxa;
-        if(this._saldo >= valor){
-            this._saldo -= valor;
-        } else {
-            console.log("Saldo indisponivel.")
+        this._sacar(valor, taxa);
+    }
+
+    _sacar(valor, taxa){
+        const valorSacado = valor *= taxa;
+        if(this._saldo >= valorSacado){
+            this._saldo -= valorSacado;
+            return valorSacado;
         }
-        return valor;
+        console.log("Saldo indisponivel.");
+        return 0;
     }
     depositar(valor){
         if(valor <= 0){
