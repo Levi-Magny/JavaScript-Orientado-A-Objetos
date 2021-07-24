@@ -20,6 +20,8 @@ export class Conta {
     }
 
     sacar(valor){
+        let taxa = 1;
+        valor *= taxa;
         if(this._saldo >= valor){
             this._saldo -= valor;
         } else {

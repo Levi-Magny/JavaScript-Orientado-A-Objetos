@@ -8,4 +8,15 @@ export class contaCorrente extends Conta{
         super(0, cliente, agencia);
         contaCorrente.numerodecontas += 1;
     }
+
+    sacar(valor){
+        let taxa = 1.1;
+        valor *= taxa;
+        if(this._saldo >= valor){
+            this._saldo -= valor;
+        } else {
+            console.log("Saldo indisponivel.")
+        }
+        return valor;
+    }
 }
