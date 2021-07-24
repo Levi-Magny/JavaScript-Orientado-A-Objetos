@@ -1,12 +1,9 @@
 export class Conta {
-    // conta quantas vezes um construtor de contacorrente foi chamado.
-    static numerodecontas = 0; // é uma variável acima da instância do objeto individutal
 
     constructor(saldoInicial, cliente, agencia){
         this._cliente = cliente;
         this._agencia = agencia;
         this._saldo = saldoInicial;
-        Conta.numerodecontas += 1;
     }
 
     get agencia(){
