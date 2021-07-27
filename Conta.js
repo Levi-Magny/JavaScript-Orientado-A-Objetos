@@ -1,6 +1,11 @@
 export class Conta {
-
+    /*
+        Uma classe que não pode ser instanciada diretamente é chamada de classe ABSTRATA.
+     */
     constructor(saldoInicial, cliente, agencia){
+        if(this.constructor == Conta){ // para avisar ao desenvolvedor que essa classe não deve ser utilizada diretamente
+            throw new Error("Você não deveria instanciar objeto do tipo 'Conta' diretamente, pois essa é uma classe abstrata.");
+        }
         this._cliente = cliente;
         this._agencia = agencia;
         this._saldo = saldoInicial;
