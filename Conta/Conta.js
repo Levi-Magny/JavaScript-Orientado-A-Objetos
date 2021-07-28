@@ -24,9 +24,11 @@ export class Conta {
         this._cliente = valor;
     }
 
+    /* Metodo abstrato.
+    Métodos abstratos devem ser sobrescritos pelas classes filhas.
+    */
     sacar(valor){
-        let taxa = 1;
-        this._sacar(valor, taxa);
+        throw new Error("O metodo 'sacar()' da Conta e abstrato");
     }
 
     _sacar(valor, taxa){
@@ -40,7 +42,7 @@ export class Conta {
     }
     depositar(valor){
         if(valor <= 0){
-            console.log("valor válido");
+            console.log("valor valido");
             return;
         }
         this._saldo += valor;
