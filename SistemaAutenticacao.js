@@ -3,6 +3,11 @@ export class SistemaAutenticacao{
     comportamento polimórfico:
     Não importa qual o tipo de funcionário tente logar,
     desde que seja herde a classe generica "Funcionario".
+
+    - Duck type -
+    "If it walks like a duck and it quacks like a duck, then it must be a duck",
+        É muito comum em linguagens fracamente tipadas como o Javascript - a linguagem apenas se preocupa com 
+        o comportamento do tipo, não com o tipo em si.
     */
     static login(autenticavel, senha){
         if(SistemaAutenticacao.e_autenticavel(autenticavel)){        
