@@ -9,4 +9,9 @@ const gerente = new Gerente("Peter", 5000, 12378945601);
 
 const estaLogado = SistemaAutenticacao.login(diretor, "123654");
 
-console.log(estaLogado);
+// console.log(estaLogado);
+
+const cliente = new Cliente("Laís", 46578925814, "459");
+const clienteLogado = SistemaAutenticacao.login(cliente, "459");
+
+console.log(clienteLogado);
